@@ -1,0 +1,105 @@
+.preview {
+   color: #FFAA47;
+   position: relative;
+   z-index: 1;
+
+   @media (max-width: $tableW) {
+      text-align: center;
+   }
+
+   &::after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      background-image: url('@img/main-bg.png');
+      background-position: center;
+      background-size: cover;
+
+      @media (max-width: $tableW) {
+         background-image: none!important;
+         background-color: rgba(0,0,0,0.5);
+      }
+   }
+}
+
+.preview__container {
+   min-height: 100vh;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.preview__video {
+   position: absolute;
+   z-index: -1;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.preview__title {
+   font-weight: 600;
+   margin-bottom: 18px;
+   font-size: 170px;
+   text-transform: capitalize;
+   transform: translateX(-120%);
+   animation: previewUp 1s cubic-bezier(.48,1.24,.47,1.33) forwards;
+   animation-delay: 0.5s;
+
+   @media (max-width: $desktopW) {
+      font-size: calcFluidFontSize(170, 50, 1440, 320);
+      margin-bottom: 10px;
+   }
+}
+
+.preview__wrapper {
+   max-width: 813px;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+
+   @media (max-width: $tableW) {
+      display: block;
+   }
+}
+
+.preview__descr {
+   font-size: 28px;
+   flex: 1 1 auto;
+   max-width: 432px;
+   margin-right: 10px;
+   transform: translateX(-120%);
+   animation: previewUp 1s cubic-bezier(.48,1.24,.47,1.33) forwards;
+   animation-delay: 1s;
+
+   @media (max-width: $tableW) {
+      font-size: 16px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+   }
+}
+
+.preview__link {
+   flex: 0 0 227px;
+   opacity: 0;
+   transform: translateY(30%);
+   animation: previewBtnUp 1s cubic-bezier(.48,1.24,.47,1.33) forwards;
+   animation-delay: 1.5s;
+
+   &:hover,
+   &:focus {
+      animation: backgroundMove 2s infinite, previewBtnUp 1s cubic-bezier(.48,1.24,.47,1.33) forwards
+   }
+
+   @media (max-width: $tableW) {
+      margin: 0 auto;
+   }
+}

@@ -1,0 +1,44 @@
+.slogan {
+   padding-bottom: 50px;
+}
+
+.slogan__container {
+   display: flex;
+   flex-direction: column;
+}
+
+.slogan__title {
+   max-width: 1170px;
+   margin: 0 auto;
+   margin-bottom: 64px;
+   text-align: center;
+   background: -webkit-linear-gradient(left, #9747FF, #FF8A00);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   background-size: 200%;
+   animation: gradientMove 4s linear infinite;
+}
+
+.slogan__sign {
+   margin: 0 auto;
+}
+
+.slogan-2 {
+   padding-bottom: 169px;
+
+   @media (max-width: $tableW) {
+      padding-bottom: 70px;
+   }
+
+   .slogan__sign {
+      width: 443px;
+
+      @media (max-width: $tableW) {
+         width: auto;
+      }
+   }
+
+   .slogan__title {
+      margin-bottom: 48px;
+   }
+}

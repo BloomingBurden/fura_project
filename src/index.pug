@@ -1,0 +1,43 @@
+doctype html
+html(lang="ru")
+   head
+      meta(charset="UTF-8")
+      meta(http-equiv="X-UA-Compatible" content="IE=edge")
+      meta(name="viewport" content="width=device-width, initial-scale=1.0")
+      link(rel="icon" href="images/favicon.png")
+      title Document
+      link(rel="stylesheet" href="css/style.min.css")
+   body.index-client--active
+      .wrapper.d-flex.f-column
+
+         include html/header.pug
+         
+         main.main
+            .index-client#index-client
+               include html/preview.pug
+               include html/time.pug
+               include html/car.pug
+               include html/about.pug
+               include html/load.pug
+               include html/descr.pug
+               include html/slogan.pug
+
+            .index-driver.visually-hidden#index-driver
+               include html/driver-preview.pug
+               include html/cooperation.pug
+               include html/additional.pug
+               include html/load.pug
+               include html/d-descr.pug
+               include html/d-slogan.pug
+
+         include html/footer.pug
+      
+      .toggle-page.toggle-page--client
+         a(href="#").toggle-page__btn 
+            span.toggle-page__text--client Заказчикам
+            span.toggle-page__text--driver Перевозчикам
+            span.toggle-page__span.toggle-page__span--car
+            span.toggle-page__span.toggle-page__span--box
+
+      script(src="js/app.min.js")
+

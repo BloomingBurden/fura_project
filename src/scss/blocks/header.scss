@@ -1,0 +1,71 @@
+.header {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 998;
+}
+
+.header__container {
+   align-items: center;
+   justify-content: space-between;
+   min-height: 120px;
+
+   @media (max-width: $tableW) {
+      min-height: 100px;
+   }
+}
+
+.logo {
+   display: block;
+   flex: 0 0 74px;
+   height: 74px;
+}
+
+.sign {
+   flex: 0 0 217px;
+
+   @media (max-width: $tableW) {
+      flex: 0 0 180px;
+   }
+}
+
+.sign__link {
+   display: flex;
+   width: 100%;
+   justify-content: center;
+   align-items: center;
+   padding: 10px 16px;
+   min-height: 48px;
+   border-radius: 100px;
+   border: 1px solid #FFF;
+   box-shadow: 0px 0px 5px 0px #FFF;
+   
+   font-weight: 700;
+   color: #FFF;
+   font-size: 12px;
+   font-weight: 400;
+   line-height: 22px; /* 183.333% */
+   text-transform: uppercase;
+   transition: box-shadow 0.4s ease;
+
+   &:hover,
+   &:focus {
+      box-shadow: 0px 0px 15px 0px #FFF;
+   }
+
+   @media (max-width: $tableW) {
+      padding: 5px;
+   }
+
+   &::after {
+      content: '';
+      width: 24px;
+      height: 24px;
+      margin-left: 10px;
+      background-image: url('@img/sign.svg');
+      background-position: center;
+      background-size: cover;
+   }
+}
+

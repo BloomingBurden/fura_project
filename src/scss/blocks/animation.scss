@@ -1,0 +1,168 @@
+@keyframes previewUp {
+   from {
+      transform: translateX(-100%);
+   }
+
+   to {
+      transform: translateX(0);
+   }
+}
+
+@keyframes previewBtnUp {
+   from {
+      opacity: 0;
+      transform: translateY(30%);
+   }
+
+   to {
+      opacity: 1;
+      transform: translateY(0%);
+   }
+}
+
+@keyframes gradientMove {
+   from {
+      background-position: 0% 0%;
+   }
+
+   50% {
+      background-position: 100% 50%;
+   }
+
+   to {
+      background-position: 0% 0;
+   }
+}
+
+@keyframes upAbout {
+   from {
+      transform: translateY(50%) scale(0.5);
+      opacity: 0;
+   }
+
+   to {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+   }
+}
+
+@keyframes downAbout {
+   from {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+   }
+   to {
+      transform: translateY(50%) scale(0.5);
+      opacity: 0;
+   }
+
+}
+
+@keyframes blurShow {
+   from {
+      opacity: 0;
+   }
+
+   20% {
+      opacity: 1;
+   }
+
+   90% {
+      opacity: 0;
+   }
+}
+
+@keyframes boxShow {
+   from {
+      transform: translate(-30%, -30%);
+      opacity: 0;
+   }
+   to {
+      transform: translate(0, 0);
+      opacity: 1;
+      visibility: visible;
+   }
+}
+@keyframes boxHide {
+   from {
+      transform: translate(0, 0);
+      opacity: 1;
+      visibility: visible;
+   }
+   to {
+      transform: translate(30%, 30%);
+      opacity: 0;
+   }
+}
+
+@keyframes carShow {
+   from {
+      transform: rotate(-12deg) translate(30%, 30%);
+      opacity: 0;
+   }
+   to {
+      transform: rotate(-12deg) translate(0, 0);
+      opacity: 1;
+      visibility: visible;
+   }
+}
+@keyframes carHide {
+   from {
+      transform: rotate(-12deg) translate(0, 0);
+      opacity: 1;
+      visibility: visible;
+   }
+   to {
+      transform: rotate(-12deg) translate(-30%, -30%);
+      opacity: 0;
+   }
+}
+
+@keyframes filterUp {
+   from {
+      filter: blur(10px);
+   }
+   50% {
+      filter: blur(25px);
+   }
+
+   to {
+      filter: blur(10px);
+   }
+}
+
+@keyframes backgroundMove {
+   from {
+      background-position: 0px 0px;
+   }
+   50% {
+      background-position: 500px 0px;
+   }
+
+   to {
+      background-position: 0px 0px;
+   }
+}
+
+@keyframes animeScaleUp {
+   from {
+      transform: scale(0);
+      opacity: 0;
+   }
+
+   to {
+      transform: scale(1);
+      opacity: 1;
+   }
+}
+@keyframes animeScaleDown {
+   from {
+      transform: scale(1);
+      opacity: 1;
+   }
+   
+   to {
+      transform: scale(0);
+      opacity: 0;
+   }
+}

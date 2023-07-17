@@ -1,0 +1,96 @@
+.cooperation__container {
+   display: flex;
+   flex-direction: column;
+}
+
+.cooperation__title {
+   margin-bottom: 48px;
+}
+
+.cooperation__list {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 0 -8px;
+   margin-bottom: 48px;
+
+   @media (max-width: $tableW) {
+
+   }
+}
+
+.cooperation__item {
+   flex: 1 1 calc(33.333%);
+   padding: 0 8px;
+   margin-bottom: 16px;
+   min-height: 291px;
+   min-width: calc(230px + 16px);
+
+   &:nth-child(1) .cooperation__inner {
+      &::after {
+         background-image: url('@img/index-2/coop-1.svg');
+      }
+   }
+   &:nth-child(2) .cooperation__inner {
+      &::after {
+         background-image: url('@img/index-2/coop-2.svg');
+      }
+   }
+   &:nth-child(3) .cooperation__inner {
+      &::after {
+         background-image: url('@img/index-2/coop-3.svg');
+      }
+   }
+}
+
+.cooperation__inner {
+   position: relative;
+   height: 100%;
+   padding: 72px 16px 24px 16px;
+   border-radius: 32px;
+   background-image: linear-gradient(147deg, rgba(151, 71, 255, 0.15) 0%, rgba(255, 138, 0, 0.15) 66.10%);
+   background-color: rgba(40, 35, 74, 0.30);
+   background-size: 150% 150%;
+   animation: gradientMove 4s linear infinite;
+
+   &::after {
+      content: '';
+      position: absolute;
+      top: 24px;
+      left: 16px;
+      width: 32px;
+      height: 32px;
+      background-position: center;
+      background-size: cover;
+   }
+}
+
+
+.cooperation__subtitle {
+   font-size: 28px;
+   font-weight: 400;
+   margin-bottom: 16px;
+
+   @media (max-width: $desktopW) {
+      font-size: 24px;
+   }
+
+   @media (max-width: 1000px) {
+      font-size: 20px;
+   }
+}
+
+.cooperation__text {
+   font-size: 24px;
+
+   @media (max-width: $desktopW) {
+      font-size: 20px;
+   }
+
+   @media (max-width: 1000px) {
+      font-size: 18px;
+   }
+}
+
+.cooperation__sign {
+   margin: 0 auto;
+}

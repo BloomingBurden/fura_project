@@ -1,0 +1,145 @@
+.load {
+   padding-bottom: 58px;
+   min-height: 100vh;
+   height: 100%;
+   width: 100%;
+}
+
+.load__title {
+   margin-bottom: 30px;
+   text-align: center;
+}
+
+.load__inner {
+   margin-bottom: 100px;
+   display: flex;
+   justify-content: space-between;
+   padding: 0 40px;
+
+   @media (max-width: $tableW) {
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0;
+      margin-bottom: 50px;
+   }
+}
+
+.load__img {
+   width: 100%;
+   flex: 1 1 auto;
+   transition: $anime-trans;
+   margin-right: 10px;
+
+   @media (max-width: $tableW) {
+      margin: 0;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      max-width: 200px;
+   }
+
+   @media (max-width: 480px) {
+      max-width: 130px;
+   }
+
+   &:last-child {
+      margin-right: 0;
+   }
+
+   &:hover {
+      transform: scale(1.06);
+   }
+
+   img {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+      border-radius: 30px;
+      box-shadow: 0px 4px 20px 0px rgba(11, 0, 71, 0.20);
+   }
+}
+
+.load__img-1 {
+   max-width: 196px;
+   max-height: 423px;
+   margin-top: 100px;
+}
+
+.load__img-2 {
+   margin-top: 50px;
+   max-width: 212px;
+   max-height: 458px;
+}
+
+.load__img-3 {
+   max-width: 296px;
+   max-height: 596px;
+
+   @media (max-width: $tableW) {
+      order: -1;
+   }
+}
+
+.load__img-4 {
+   margin-top: 50px;
+   max-width: 212px;
+   max-height: 458px;
+}
+
+.load__img-5 {
+   margin-top: 100px;
+   max-width: 196px;
+   max-height: 423px;
+}
+
+.load__buttons {
+   display: flex;
+   max-width: 735px;
+   margin: 0 auto;
+   justify-content: space-between;
+   align-items: center;
+   min-height: 70px;
+
+   @media (max-width: $tableW) {
+      flex-direction: column;
+   }
+}
+
+.load__app {
+   background-color: #000;
+   background-image: url('@img/load/load-app.png');
+
+   @media (max-width: $tableW) {
+      margin-bottom: 15px;
+   }
+}
+
+.load__sign {
+   @media (max-width: $tableW) {
+      order: 1;
+   }
+}
+
+.load__google {
+   background-image: url('@img/load/load-google.svg');
+   background-color: #000;
+
+   @media (max-width: $tableW) {
+      margin-bottom: 15px;
+   }
+}
+
+.load__google,
+.load__app {
+   background-position: center;
+   background-size: cover;
+   min-height: 64px;
+   width: 185px;
+   border-radius: 50px;
+   font-size: 0;
+   transition: $anime-trans;
+
+   &:hover,
+   &:focus {
+      transform: scale(1.05);
+   }
+}
