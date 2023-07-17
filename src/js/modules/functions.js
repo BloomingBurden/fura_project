@@ -13,12 +13,35 @@ const isWebp = () => {
     });
 };
 
+const moveBlocksReset = () => {
+    const car = document.querySelector('.car');
+    const carImg = car.querySelector('.car__img');
+    const carText = car.querySelector('.car__header');
+    
+    carImg.hasAttribute('style') ? car.removeAttribute('style') : false;
+    carText.hasAttribute('style') ? carText.removeAttribute('style') : false;
+}
+
+const moveBlocksTwoReset = () => {
+    const about = document.querySelector('.about__container');
+    const list = about.querySelector('.about__list');
+    const items = about.querySelectorAll('.about__item');
+
+    items.forEach((item, i) => {
+        item.hasAttribute('style') ? item.removeAttribute('style') : false;
+    });
+
+    list.classList.remove('about__list--up');
+    list.classList.add('about__list--down');
+};
+
 const startBlur = (evt) => {
     let transition = document.createElement('div');
     transition.classList.add('blur-transition');
     transition.classList.add('blur-transition--open');
     document.body.appendChild(transition);
-
+    window.scrollTo(0, 0);
+    
     setTimeout(function() {
       document.body.removeChild(transition);
     }, 1500);
@@ -32,6 +55,9 @@ const toggleIndex = () => {
     
     btn.addEventListener('click', (evt) => {
         evt.preventDefault();
+
+        moveBlocksTwoReset()
+        moveBlocksReset();
 
         if (body.classList.contains('index-driver--active')) {
             startBlur(evt);
