@@ -1128,8 +1128,8 @@ button {
   z-index: 9999;
   left: 15px;
   bottom: 15px;
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
 }
 
 .toggle-page::before {
@@ -1162,17 +1162,17 @@ button {
 .toggle-page__btn .toggle-page__span--car {
   -webkit-transform: rotate(-12deg);
           transform: rotate(-12deg);
-  width: 40px;
-  height: 40px;
-  top: 16px;
-  left: 12px;
+  width: 50px;
+  height: 50px;
+  top: 12px;
+  left: 5px;
   background-image: url("../img/toggle-car.svg");
 }
 
 .toggle-page__btn .toggle-page__span--box {
-  width: 30px;
-  height: 32px;
-  top: 50px;
+  width: 40px;
+  height: 42px;
+  top: 45px;
   left: 45px;
   background-image: url("../img/toggle-box.svg");
 }
@@ -1540,7 +1540,7 @@ button {
 }
 
 .time__wrapper {
-  bottom: 0;
+  bottom: 190px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1552,7 +1552,7 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 130px 210px 240px;
+  padding: 0 130px 20px 240px;
 }
 
 .time__wrapper-1 {
@@ -2564,6 +2564,25 @@ button {
 
   .m-bottom {
     margin-bottom: 70px;
+  }
+
+  .toggle-page {
+    width: 100px;
+    height: 100px;
+  }
+
+  .toggle-page__btn .toggle-page__span--car {
+    width: 40px;
+    height: 40px;
+    top: 16px;
+    left: 12px;
+  }
+
+  .toggle-page__btn .toggle-page__span--box {
+    width: 30px;
+    height: 32px;
+    top: 50px;
+    left: 45px;
   }
 
   .header__container {
