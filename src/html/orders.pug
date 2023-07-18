@@ -1,0 +1,26 @@
+section.orders.m-bottom
+   .orders__container 
+      h2.orders__title.title Как сделать заказ?
+      .orders__inner
+         .orders__image 
+            picture 
+               source(type="image/webp" srcset="@img/order-img.webp")
+               img(src="@img/order-img.png", alt="Контент изображение" width="277" height="600")
+         .orders__wrap
+            ul(data-move-effects="upAbout, downAbout, true").orders__list
+               li.orders__item
+                  span.orders__num 1
+                  p.orders__text Зарегистрируйтесь, как грузоотправитель
+               li.orders__item
+                  span.orders__num 2
+                  p.orders__text Укажите данные своей организации и дождитесь окончания проверки
+               li.orders__item
+                  span.orders__num 3
+                  p.orders__text Укажите параметры груза и маршрут
+               li.orders__item
+                  span.orders__num 4
+                  p.orders__text Дождитесь назначения машины
+               li.orders__item
+                  span.orders__num 5
+                  p.orders__text Обменяйтесь документами в ЭДО (договор автоматически сформируется)
+            .orders__add Ожидайте грузоперевозчика!
