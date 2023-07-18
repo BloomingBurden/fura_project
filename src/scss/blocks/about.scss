@@ -97,3 +97,61 @@
       font-size: 16px;
    }
 }
+
+.d-about {
+   position: relative;
+   z-index: 1;
+
+   background-image: url('@img/index-2/about-bg.jpg');
+   background-position: center;
+   background-size: cover;
+
+   @media (max-width: $tableW) {
+      background-image: url('@img/index-2/about-bg-m.jpg');
+   }
+
+   &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.3);
+   }
+}
+
+.d-about__container {
+   min-height: 100vh;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.d-about__title {
+   max-width: 1084px;
+   font-size: 64px;
+   font-weight: 400;
+   line-height: 110%;
+   margin-bottom: 32px;
+
+   span {
+      color: #FFAA47;
+   }
+}
+
+.d-about__text {
+   color: #FFF;
+   font-size: 28px;
+
+   @media (max-width: $desktopW) {
+      font-size: calcFluidFontSize(28, 18, 1440, 320);
+   }
+
+   span {
+      color: #D0ABFF;
+   }
+}

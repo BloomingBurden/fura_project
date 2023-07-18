@@ -1,4 +1,39 @@
 export const onScrollMove = () => {
+    const time = document.querySelector('.time');
+
+    if (!time) return;
+
+    const wrapperOne = time.querySelector('.time__wrapper-1');
+    const wrapperTwo = time.querySelector('.time__wrapper-2');
+    let timeTop = time.getBoundingClientRect().top + window.scrollY;
+    let differenceThree = window.scrollY - timeTop;
+    let differenceThreeEnd = 0;
+    let differenceGapThree = 200;
+    let firstTime = true;
+
+    const moveBlocksResetTwo = () => {
+        wrapperOne.hasAttribute('style') ? wrapperOne.removeAttribute('style') : false;
+        wrapperTwo.hasAttribute('style') ? wrapperTwo.removeAttribute('style') : false;
+    }
+    
+    const moveBlocksOne = () => {
+        if (window.scrollY > timeTop) {
+            wrapperOne.style.transform = `translateX(-${differenceThree / 10}%)`;
+
+            if (differenceThree >= differenceGapThree) {
+                const opacity = differenceThreeEnd / 1000 < 1 ? differenceThreeEnd / 1000 : 1;
+                wrapperTwo.style.opacity = `${(opacity).toFixed(3)}`;
+            }
+        } else {
+            moveBlocksResetTwo();
+        }
+
+        requestAnimationFrame(moveBlocksOne);
+    };
+    moveBlocksOne();
+
+
+
     const car = document.querySelector('.car');
 
     if (!car) return;
@@ -81,6 +116,12 @@ export const onScrollMove = () => {
     window.addEventListener('scroll', () => {
         differenceOne = window.scrollY - carTop;
         differenceTwo = window.scrollY - aboutTop;
+        differenceThree = window.scrollY - timeTop;
+        differenceThreeEnd = window.scrollY - timeTop - differenceGapThree;
+
+        if (differenceThree >= differenceGapThree && firstTime) {
+            firstTime = false;
+        }
     });
 
 

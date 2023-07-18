@@ -108,6 +108,18 @@ button {
    }
 }
 
+.button.button--fill {
+   background-image: linear-gradient(182deg, rgba(255, 170, 71, 0.20) 0%, rgba(151, 71, 255, 0.20) 100%), linear-gradient(130deg, rgba(151, 71, 255, 0.60) 0%, rgba(255, 138, 0, 0.60) 92.71%)!important;
+   background-color: rgba(159, 86, 62, 0.60)!important;
+   color:#fff;
+   
+   -webkit-background-clip:initial;
+   -webkit-text-fill-color:initial;
+   text-shadow: none;
+   border: none;
+   min-height: 56px;
+}
+
 .visually-hidden {
    position: absolute;
    width: 1px;
