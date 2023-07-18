@@ -1540,7 +1540,7 @@ button {
 }
 
 .time__wrapper {
-  bottom: 210px;
+  bottom: 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;

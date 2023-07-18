@@ -21,7 +21,7 @@ export const onScrollMove = () => {
             wrapperOne.style.transform = `translateX(-${differenceThree / 10}%)`;
 
             if (differenceThree >= differenceGapThree) {
-                const opacity = differenceThreeEnd / 1000 < 1 ? differenceThreeEnd / 1000 : 1;
+                const opacity = differenceThreeEnd / 700 < 1 ? differenceThreeEnd / 700 : 1;
                 wrapperTwo.style.opacity = `${(opacity).toFixed(3)}`;
             }
         } else {
