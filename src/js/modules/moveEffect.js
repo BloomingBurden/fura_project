@@ -3,7 +3,7 @@ import { throttling } from "./utils.js";
 const dataEffects = document.querySelectorAll('[data-move-effects]');
 
 const setStyleOnChildren = (elem, visible, unvisible) => {
-    const tags = ['DIV', 'P', 'H1', 'H2', 'H3', 'H4', 'LI', 'BUTTON', 'IMG'];
+    const tags = ['DIV', 'H1', 'H2', 'H3', 'H4', 'LI', 'BUTTON', 'IMG'];
 
     if (elem.children.length === 0) {
         if (tags.includes(elem.tagName)) {

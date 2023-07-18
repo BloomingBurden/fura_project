@@ -1115,7 +1115,7 @@ button {
 .toggle-page {
   position: fixed;
   z-index: 9999;
-  right: 15px;
+  left: 15px;
   bottom: 15px;
   width: 100px;
   height: 100px;
@@ -1190,34 +1190,34 @@ button {
           animation: filterUp 2s ease infinite;
 }
 
-.index-driver--active .toggle-page__text--client {
+.index-client--active .toggle-page__text--client {
   display: none;
 }
 
-.index-driver--active .toggle-page__span--box {
+.index-client--active .toggle-page__span--box {
   -webkit-transform: rotate(-12deg) translate(30%, 30%);
           transform: rotate(-12deg) translate(30%, 30%);
   -webkit-animation: carHide 0.4s ease forwards;
           animation: carHide 0.4s ease forwards;
 }
 
-.index-driver--active .toggle-page__span--car {
+.index-client--active .toggle-page__span--car {
   -webkit-transform: rotate(-12deg) translate(30%, 30%);
           transform: rotate(-12deg) translate(30%, 30%);
   -webkit-animation: carShow 0.4s ease forwards;
           animation: carShow 0.4s ease forwards;
 }
 
-.index-client--active .toggle-page__text--driver {
+.index-driver--active .toggle-page__text--driver {
   display: none;
 }
 
-.index-client--active .toggle-page__span--car {
+.index-driver--active .toggle-page__span--car {
   -webkit-animation: boxHide 0.4s ease forwards;
           animation: boxHide 0.4s ease forwards;
 }
 
-.index-client--active .toggle-page__span--box {
+.index-driver--active .toggle-page__span--box {
   -webkit-transform: translate(-30%, -30%);
           transform: translate(-30%, -30%);
   -webkit-animation: boxShow 0.4s ease forwards;

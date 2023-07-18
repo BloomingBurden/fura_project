@@ -208,7 +208,7 @@ button {
 .toggle-page {
    position: fixed;
    z-index: 9999;
-   right: 15px;
+   left: 15px;
    bottom: 15px;
    width: 100px;
    height: 100px;
@@ -274,7 +274,7 @@ button {
    }
 }
 
-.index-driver--active {
+.index-client--active {
    .toggle-page__text--client {
       display: none;
    }
@@ -290,7 +290,7 @@ button {
    }
 }
 
-.index-client--active {
+.index-driver--active {
    .toggle-page__text--driver {
       display: none;
    }
