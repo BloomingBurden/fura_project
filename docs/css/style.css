@@ -1510,7 +1510,7 @@ button {
   background-position: top;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 100vw cover;
 }
 
 .time__container {
